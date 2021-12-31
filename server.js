@@ -4,6 +4,7 @@ const app = express()
 app.set('view engine', 'ejs')
 app.use(logger)
 app.use(express.static('public'))
+app.use(express.urlencoded({extended: true}))
 
 const userRouter = require('./routes/users')
 app.use('/users', userRouter)
