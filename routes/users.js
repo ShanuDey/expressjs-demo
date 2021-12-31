@@ -9,4 +9,8 @@ router.get('/new', (req, res) => {
     res.send('New user form')
 })
 
+router.get('/:id', (req, res) => {
+    res.send(`Get the user with ID: ${req.params.id}`)
+})
+
 module.exports = router
